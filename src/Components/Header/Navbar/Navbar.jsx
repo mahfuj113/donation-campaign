@@ -10,23 +10,23 @@ const Navbar = () => {
                         <NavLink
                             to="/"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-green-400 underline" : ""
+                                isPending ? "pending" : isActive ? "text-red-400 underline" : ""
                             }
                         >Home</NavLink>
                     </li>
                     <li>
                         <NavLink
-                            to="/"
+                            to="/donation"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-green-400 underline" : ""
+                                isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
                             }
                         >Donation</NavLink>
                     </li>
                     <li>
                         <NavLink
-                            to="/"
+                            to="/statistics"
                             className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "text-green-400 underline" : ""
+                                isPending ? "pending" : isActive ? "text-red-400 underline" : ""
                             }
                         >Statistics</NavLink>
                     </li>

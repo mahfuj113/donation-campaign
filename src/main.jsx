@@ -8,6 +8,7 @@ import {
 import MainLayout from './layout/MainLayout';
 import Home from './Pages/Home/Home';
 import Category from './Pages/Category/Category';
+import Donation from './Pages/Donation/Donation';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch("../public/data.json")
+      },
+      {
+        path: "/donation",
+        element: <Donation></Donation>
       },
       {
         path: "/categories/:id",
