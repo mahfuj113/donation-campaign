@@ -29,7 +29,7 @@ const Donation = () => {
             </div>
             <div className=" mt-10 mb-36">
                 {
-                    donation.length >= 4 && (
+                    donation.length > 4 && (
                         <div className={isShow ? "hidden" : "text-center"}>
                             <button onClick={() => setIsShow(!isShow)} className="bg-[#009444] text-[#FFF] rounded-lg px-7 py-3">Show All</button>
                         </div>

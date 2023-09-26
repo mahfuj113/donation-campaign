@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 
 const CategoryCard = ({ category }) => {
 
-    const { id, image, title, description } = category;
+    const { id, image, title, description,text_bg } = category;
     const handleAddToDonation = () => {
         const addedDonationArray = []
         const donationItems = JSON.parse(localStorage.getItem("donation"))
@@ -41,13 +41,12 @@ const CategoryCard = ({ category }) => {
         }
     }
     return (
-        <div className='w-[1320px] mx-auto mb-28'>
+        <div className='w-[1320px] relative mx-auto mb-28'>
             <img src={image} className='w-full h-[700px] rounded-lg' alt="" />
-            <div className='h-32 bg-[#0B0B0B7F] flex items-center'>
-                {/* <div className='bg-[#0B0B0B7F] h-32 bg-opacity-50'> */}
-                <button onClick={handleAddToDonation} className='btn'>Donate $290</button>
+            <div className='h-32 w-full absolute bottom-[21.5%] bg-[#0B0B0B7F] flex items-center'>
+                <button style={{backgroundColor:`${text_bg}`}} onClick={handleAddToDonation} className='ml-9 px-6 py-4 text-[#FFF] text-xl font-semibold rounded'>Donate $290</button>
             </div>
-            <h1 className='text-4xl font-bold mb-6'>{title}</h1>
+            <h1 className='text-4xl font-bold mb-6 mt-14'>{title}</h1>
             <p className='text-base font-normal'>{description}</p>
         </div>
     )
