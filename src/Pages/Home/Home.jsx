@@ -6,7 +6,7 @@ import { useState } from "react";
 const Home = () => {
     const [query, setQuery] = useState('');
     const [result,setResult] = useState([]);
-    const categories = useLoaderData();
+    const categories = useLoaderData()
     const handleSearch = () => {
          const filterData = categories.filter(item => item.category_name.toLowerCase().includes(query.toLowerCase()))
         setResult(filterData)

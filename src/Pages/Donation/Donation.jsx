@@ -12,13 +12,13 @@ const Donation = () => {
             setDonation(donationItems)
         }
         else {
-            setNoFound("No Fata Found")
+            setNoFound("You not given donation ")
         }
     }, [])
     return (
         <div>
             {
-                noFound && <p className="h-[80vh] flex justify-center items-center">{noFound}</p>
+                noFound && <p className="h-[80vh] text-5xl flex justify-center items-center">{noFound}</p>
             }
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:mx-[140px] items-center">
                 {
